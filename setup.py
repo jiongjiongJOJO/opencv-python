@@ -183,7 +183,7 @@ def main():
             "-DINSTALL_CREATE_DISTRIB=ON",
             # See opencv/CMakeLists.txt for options and defaults
             "-DBUILD_opencv_apps=OFF",
-            "-DBUILD_opencv_freetype=OFF",
+            "-DBUILD_opencv_freetype=ON",
             "-DBUILD_SHARED_LIBS=OFF",
             "-DBUILD_TESTS=OFF",
             "-DBUILD_PERF_TESTS=OFF",
