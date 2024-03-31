@@ -138,7 +138,6 @@ jobs:
         python -m pylint $PYLINT_TEST_FILE
 
   Pre-release:
-    if: github.event_name == 'release' && github.event.release.prerelease
     needs: [Build, Test]
     runs-on: ubuntu-20.04
     environment: test-opencv-python-release
@@ -146,10 +145,6 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: wheels
-          path: wheelhouse/
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
